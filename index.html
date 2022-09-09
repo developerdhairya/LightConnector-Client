@@ -1,12 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Welcome to Light Connector</h1>
-</body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/images/favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/new.css" />
+    <title></title>
+  </head>
+
+  <body>
+    <nav class="mt-3">
+      <div class="container desktop">
+        <div class="row justify-content-between">
+          <div class="col-md-5 ">
+            <img class="nav-icon" src="assets/images/link.png" alt="Image not available" />
+          </div>
+          <div class="col-md-1 moonImg">
+            <img
+              src="assets/images/moon.png"
+              alt="Image not available"
+              id="icondesktop"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- <div class="container mobile">
+        <div class="row">
+          <div class="ham col-3" style="height: 5rem">
+            <img src="assets/images/favicon.ico" alt="Image not available" />
+          </div>
+          <div class="text-end col-9 moonImg">
+            <img
+              src="assets/images/moon.png"
+              alt="Image not available"
+              id="iconmobile"
+            />
+          </div>
+        </div>
+      </div> -->
+    </nav>
+    <!-- newmain section -->
+    <div class="main"></div>
+    <section class="newmain">
+      <div class="container newmainDiv h-100">
+        <div class="row vh-100">
+          <div class="col-md-6 my-auto my-xs-0 col-xs-12">
+            <div
+              class="heroPic-div mx-auto mt-5"
+              style="
+                display: flex;
+                justify-content: center;
+                align-content: center;
+              "
+            >
+              <img
+                class="newmainimg"
+                src="assets/images/mob.png"
+                alt="Image Not Available"
+              />
+            </div>
+          </div>
+          <div class="col-md-6 my-auto my-xs-0 col-xs-12">
+            <div
+              class="heroPic-div mx-auto"
+              style="
+                display: flex;
+                justify-content: center;
+                align-content: center;
+              "
+            >
+              <img
+                class="img qrbox"
+                src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=hldojs"
+                alt="Image Not Available"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    var icondesktop = document.getElementById("icondesktop");
+    icondesktop.onclick = function () {
+      document.body.classList.toggle("dark-theme");
+      if (document.body.classList.contains("dark-theme")) {
+        icondesktop.src = "assets/images/sun.png";
+      } else {
+        icondesktop.src = "assets/images/moon.png";
+      }
+    };
+    var iconmobile = document.getElementById("iconmobile");
+    iconmobile.onclick = function () {
+      document.body.classList.toggle("dark-theme");
+      if (document.body.classList.contains("dark-theme")) {
+        iconmobile.src = "assets/images/sun.png";
+      } else {
+        iconmobile.src = "assets/images/moon.png";
+      }
+    };
+  </script>
 </html>
