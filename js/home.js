@@ -1,39 +1,40 @@
 const data = [];
-const tabs = ["all","desktop","mobile"];
+const tabs = ["all", "desktop", "mobile"];
 let currTab = 0;
 
 const msg = document.querySelector("#msg");
 
-socket.on("receive",(message,file,device)=>{
+socket.on("receive", (message, file, device) => {
   data.push({
-    "message":message,
-    "file":file,
-    "device":device
+    "message": message,
+    "file": file,
+    "device": device
   })
   renderData();
 });
 
-function transferData(files=null){
-  if (files){
-  socket.emit("transfer",dataTransferModel(qrValue,files[0].name,files[0],device[checkDevice()]));
-  } else{
-    socket.emit("transfer",dataTransferModel(qrValue,msg.value,null,device[checkDevice()]));
-    msg.value="";
+function transferData(files = null) {
+  if (files) {
+    socket.emit("transfer", dataTransferModel(qrValue, files[0].name, files[0], device[checkDevice()]));
+  } else {
+    socket.emit("transfer", dataTransferModel(qrValue, msg.value, null, device[checkDevice()]));
+    msg.value = "";
   }
 }
 
 
 document.getElementsByClassName("btn")[0].addEventListener("click", (e) => {
-  try{
+  try {
     transferData();
-  }catch(e){
-    console.log(e);
+  } catch (e) {
+    alert(`error: ${e}`)
   }
-  
+
 });
 
 document.getElementsByClassName("paste")[0].addEventListener("click", (e) => {
-  console.log(window.clipboardData.getData('Text'));;
+  navigator.clipboard.readText().then( cliptext => socket.emit("transfer", dataTransferModel(qrValue, cliptext, null, device[checkDevice()]))
+  );
 });
 document.getElementsByClassName("all")[0].addEventListener("click", (e) => {
   currTab = 0;
@@ -61,43 +62,17 @@ function readURL(input) {
 
 function renderData() {
   let filteredData = [];
-  if(currTab===0){
-    filteredData=data;
-  }else{
+  if (currTab === 0) {
+    filteredData = data;
+  } else {
     filteredData = data.filter((obj) => {
-      console.log(obj.device+100);
       return obj.device == tabs[currTab];
     });
   }
 
-  console.log(filteredData);
-  let txt="";
+  let txt = "";
   filteredData.forEach(({ message, file }) => {
-    if (!file) {
-      txt += `<div class="each-stuff-wrapper">
-      <div class="text-item">
-        <div class="data" style="color: rgb(0, 0, 0)">
-        ${message}
-        </div>
-        <!-- image div -->
-        <button>
-        <img height="20px" src="https://cdn-icons-png.flaticon.com/512/1092/1092004.png"/>
-        </button>
-      </div>
-    </div><br>`;
-    } else {
-      txt += `<div class="each-stuff-wrapper">
-      <div class="text-item">
-        <div class="data" style="color: rgb(0, 0, 0)">
-        ${message}
-        </div>
-        <!-- image div -->
-        <a href="${file}" target="_blank"><button>
-        <img height="20px" src="https://cdn-icons-png.flaticon.com/512/1092/1092004.png"/>
-        </button></a>
-      </div>
-    </div><br>` ;
-    }
+    txt+=homeMessage({ message, file })
   });
   document.getElementsByClassName("chat-messages")[0].innerHTML = txt;
 }
