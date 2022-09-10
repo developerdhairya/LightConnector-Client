@@ -30,7 +30,7 @@ function onScanError(errorMessage) {
 // device check for mobile or pc for scanner or joiner
 let ish = document.getElementsByClassName("main")[0];
 if (checkDevice() === 0) {
-  ish.innerHTML = `<div style="width:90%;" id="reader"></div>`;
+  ish.innerHTML = `<div class="flex w-100 scannerclass justify-content-center"><div  id="reader"></div></div>`;
   var html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: 250, });
   html5QrcodeScanner.render(onScanSuccess, onScanError);
 } else {
