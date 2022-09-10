@@ -1,5 +1,3 @@
-<img src="https://telegra.ph//file/5d289693a7033873c054c.jpg" align="right" width="110" height="110"/>
-
 # LightConnector-Client
 
 ## Attention !!!
@@ -37,8 +35,9 @@ Both Proxy and Non Proxy System will be there, with public source codes 🤡
 
 # Credits 🇮🇳
 * ![TeamLightConnector-Devs](https://img.shields.io/static/v1?label=TeamLightConnector&message=devs&color=critical)
-* [Websockets.](https://github.com/aaugustin/websockets)
+* [Socket.io.](https://github.com/socketio/socket.io))
 * [Node.Js.](https://github.com/nodejs)
+* 
 
 
 > Made with 💕 by ![TeamLightConnector-Devs](https://img.shields.io/static/v1?label=TeamLightConnector&message=devs&color=critical)
