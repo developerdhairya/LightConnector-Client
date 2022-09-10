@@ -1,42 +1,62 @@
 var homePage = `  
 <div class="lightBg p-5">
+        <!-- section for sending message -->
+        <div class="text-paste-wrapper mid-it">
+          <div class="input-wrapper flex">
+            <input
+              id="msg"
+              class="msssg"
+              type="text"
+              placeholder="Enter Message"
+              required
+            />
+            <button class="mid-it paste" type="button">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/4355/4355199.png"
+                width="18px"
+                height="18px"
+              />
+            </button>
+            <div class="sendicon-wrapper mid-it btn">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1309/1309305.png"
+                height="43px"
+              />
+            </div>
+          </div>
+        </div>
 
-  <!-- section for sending message -->
-  <div class="text-paste-wrapper mid-it">
-    <div class="input-wrapper flex">
-      <input id="msg" type="text" placeholder="Enter Message" required />
-      <button  class="mid-it paste" type="button">
-        <img src="https://cdn-icons-png.flaticon.com/512/4355/4355199.png" width="18px" height="18px"/>
-      </button>
-      <div class="sendicon-wrapper mid-it btn">
-        <img src="https://cdn-icons-png.flaticon.com/512/1309/1309305.png" height="43px"/>
-      </div>
-    </div>
-  </div>
+        <div class="ortext">OR</div>
 
-  <div class="ortext">OR</div>
+        <!-- file send button -->
+        <label>
+          <div class="file-send-wrapper">
+            <input
+              type="file"
+              style="display: none"
+              onchange="transferData(this.files)"
+            />
+            <div class="choosefile-button" style="opacity: 1">Select File</div>
+          </div>
+        </label>
 
-  <!-- file send button -->
-  <label>
-    <div class="file-send-wrapper">
-      <input type="file" style="display: none" onchange="transferData(this.files)" />
-      <div class="choosefile-button" style="opacity: 1">Select File</div>
-    </div>
-  </label>
+        <!-- filters for showing files/messages in different mods  -->
+        <div class="connectedpage-three-icons-wrapper">
+          <div id="all" class="icon-wrapper mid-it highlightedSelected all">
+            All
+          </div>
+          <div id="mobile" class="icon-wrapper mid-it false mobile">Mobile</div>
+          <div id="desktop" class="icon-wrapper mid-it false desktop">
+            Laptop
+          </div>
+        </div>
 
-  <!-- filters for showing files/messages in different mods  -->
-  <div class="connectedpage-three-icons-wrapper">
-    <div id="all" class="icon-wrapper mid-it highlightedSelected all">All</div>
-    <div id="mobile" class="icon-wrapper mid-it false mobile">Mobile</div>
-    <div id="desktop" class="icon-wrapper mid-it false desktop">Laptop</div>
-  </div>
-  
-  <!-- print screen area -->
-  <div class="stuff-list-wrapper">
-    <div class="title" style="color: rgb(0, 0, 0)">Recents</div>
-    <div class="chat-messages"></div>
-  </div>
-</div> `;
+        <!-- print screen area -->
+        <div class="stuff-list-wrapper">
+          <div class="title" style="color: rgb(0, 0, 0)">Recents</div>
+          <div class="chat-messages"></div>
+        </div>
+      </div>`;
 
 var indexPagePc = qrValue => `
 <section class="newmain">
