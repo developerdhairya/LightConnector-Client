@@ -6,12 +6,11 @@ socket.on("transfer-ready", () => {
   document.body.appendChild(scriptTag);
 });
 
-let qrValue = 5925502105451266;
+let qrValue = 4343344334;
+(async()=>{
+  qrValue = await Math.random() * 90000
+})
 // session id gen
-function generateQR() {
-  qrValue = Math.random() * 9000000000000000;
-};
-// generateQR();
 
 // qr scan socket connector
 function onScanSuccess(qrCodeMessage) {
