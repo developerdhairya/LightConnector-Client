@@ -29,3 +29,18 @@ function dataTransferModel(room=null,message=null,file=null,device=null){
         "device":device
     };
 }
+ function getCopy (data){
+  navigator.clipboard.writeText(data);
+ }
+
+ function bufferToUrl(buffer,name){
+  let blob= new Blob([buffer]);
+  blob.lastModifiedDate = new Date();
+  console.log(name);
+  blob.name = name;
+  let url=window.URL.createObjectURL(blob);
+  console.log(url)
+    return url;
+
+
+ }

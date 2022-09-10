@@ -14,7 +14,7 @@ socket.on("connect", () => {
 
 
 socket.on("disconnect", () => {
-    window.reload();
+    // window.reload();
 });
 
 

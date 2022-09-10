@@ -51,7 +51,7 @@ document.getElementsByClassName("mobile")[0].addEventListener("click", (e) => {
 
 
 
-//util functions
+//home page util functions
 
 function readURL(input) {
   if (input.files && input.files[0]) {
@@ -72,7 +72,8 @@ function renderData() {
 
   let txt = "";
   filteredData.forEach(({ message, file }) => {
-    txt+=homeMessage({ message, file })
+    // if file is null then message div be rendered
+    txt+=homeMessage({ message, file });
   });
   document.getElementsByClassName("chat-messages")[0].innerHTML = txt;
 }

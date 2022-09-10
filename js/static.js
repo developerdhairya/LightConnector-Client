@@ -57,18 +57,22 @@ var indexPagePc = qrValue => `
 </section>
 `;
 
-var homeMessage = ({ message, file }) => `<div class="each-stuff-wrapper">
+var homeMessage = ({ message, file }) => {
+  let x=bufferToUrl(file, message);
+  return `<div class="each-stuff-wrapper">
 <div class="text-item">
   <div class="data" style="color: rgb(0, 0, 0)">${message}</div>
   <!-- image div -->
-  ${file ? `
+  ${x ? `
+  <a href="${x}" download="${message}">
   <button>
     <img height="20px" src="https://cdn-icons-png.flaticon.com/512/1092/1092004.png"/>
   </button>
+  </a>
   ` : `
-  <button>
-    <img height="20px" src="https://cdn-icons-png.flaticon.com/512/1092/1092004.png"/>
+  <button onclick="getCopy('${message}')">
+    <img height="20px" src="https://cdn-icons-png.flaticon.com/512/4355/4355195.png"/>
   </button>
   `}
   
-</div><br>`
+</div><br>`}
