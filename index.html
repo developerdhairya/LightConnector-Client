@@ -15,7 +15,7 @@
 
   <body>
     <nav class="mt-3">
-      <div class="container desktop">
+      <div class="container desktopnew">
         <div class="row justify-content-between">
           <div class="col-md-5 ">
             <img class="nav-icon" src="assets/images/link.png" alt="Image not available" />
@@ -24,12 +24,12 @@
             <img
               src="assets/images/moon.png"
               alt="Image not available"
-              id="icondesktop"
+              id="icondesktopnew"
             />
           </div>
         </div>
       </div>
-      <!-- <div class="container mobile">
+      <!-- <div class="container mobilenew">
         <div class="row">
           <div class="ham col-3" style="height: 5rem">
             <img src="assets/images/favicon.ico" alt="Image not available" />
@@ -38,7 +38,7 @@
             <img
               src="assets/images/moon.png"
               alt="Image not available"
-              id="iconmobile"
+              id="iconmobilenew"
             />
           </div>
         </div>
@@ -85,24 +85,5 @@
       </div>
     </section>
   </body>
-  <script>
-    var icondesktop = document.getElementById("icondesktop");
-    icondesktop.onclick = function () {
-      document.body.classList.toggle("dark-theme");
-      if (document.body.classList.contains("dark-theme")) {
-        icondesktop.src = "assets/images/sun.png";
-      } else {
-        icondesktop.src = "assets/images/moon.png";
-      }
-    };
-    var iconmobile = document.getElementById("iconmobile");
-    iconmobile.onclick = function () {
-      document.body.classList.toggle("dark-theme");
-      if (document.body.classList.contains("dark-theme")) {
-        iconmobile.src = "assets/images/sun.png";
-      } else {
-        iconmobile.src = "assets/images/moon.png";
-      }
-    };
-  </script>
+  <script src="assets/js/uttils.js"></script>
 </html>
