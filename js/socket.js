@@ -1,7 +1,7 @@
 var socket; 
 
 try{
-socket= io("http://3.110.215.239:3000")
+socket= io("https://lightconnector.herokuapp.com")
 }catch(e){
     alert("not able to connect to sockets")
 }
