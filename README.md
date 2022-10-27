@@ -14,7 +14,7 @@ Let us imagine a situation when you are sitting on a laptop working on some impo
 Well you have got Light-Connectors back..Simply go to our webpage on PC and our PWA on mobile..Scan the QR code on the webpage from mobile..A secured websocket connection will be established between your devices. 
 You can instantly transfer one-time passwords, links and even media files in realtime and the big thing is that your files will be transferred to you directly without being stored anywhere on cloud saving you a lot of time wasted 
 when you and then Download no need to build local networks like ShareIt that even disconnects you from your WIFI and get Disrupted even if you move to another room, Just 10 sec for setup and file transfer begains. 
-No need to Login, Authenticate, and do time Waisting stuff
+No need to Login, Authenticate, and do time Wasting stuff
 
 
 [![](https://img.shields.io/badge/InducedCheckerBot-v1.0.0-blue)](#)
