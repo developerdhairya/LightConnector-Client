@@ -25,12 +25,6 @@ No need to Login, Authenticate, and do time Wasting stuff
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/IshanSingla/InducedCheckerBot)
 ----
 
-## Source Codes
-* [FrontEnd](https://github.com/IshanSingla/LightConnector-Client)
-* [Backend](https://github.com/IshanSingla/LightConnector-Server)
-  
----
-
 
 # Credits 🇮🇳
 * ![TeamLightConnector-Devs](https://img.shields.io/static/v1?label=TeamLightConnector&message=devs&color=critical)
