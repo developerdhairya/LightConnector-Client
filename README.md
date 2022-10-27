@@ -8,7 +8,7 @@ Let us imagine a situation when you are sitting on a laptop working on some impo
 ```python
 {
   "Data Cables / BlueTooth": "Wastage of Precious Time",
-  "GoogleDrive / WhatsApp Web": "High Uplode/Download Time"
+  "GoogleDrive / WhatsApp Web": "High Upload/Download Time"
 }
 ```
 Well you have got Light-Connectors back..Simply go to our webpage on PC and our PWA on mobile..Scan the QR code on the webpage from mobile..A secured websocket connection will be established between your devices. 
