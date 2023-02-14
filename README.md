@@ -39,7 +39,8 @@ Let us imagine a situation where you are sitting on a laptop working on some imp
 > Made with 💕 by ![TeamLightConnector-Devs](https://img.shields.io/static/v1?label=TeamLightConnector&message=devs&color=critical) 
 
 > Individual Contributions
+- **Dhairya Taneja**- Team Leader,Project Architect,Backend Development,Frontend Development & Product Deployment
+- **Ishan Singla**- Frontend Development & Integration
+- **Aaditya Sharma**- UI/UX Design & Frontend Development
 
-- Dhairya Taneja- Team Leader,Project Architect,Backend Development, Product Deployment
-- Ishan Singla- Frontend Development & Integration
-- Aaditya Sharma- UI/UX Design & Frontend Development
+### PS-The project won Coffee&Code Hackathon at UIET Punjab.
