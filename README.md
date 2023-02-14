@@ -36,4 +36,10 @@ Let us imagine a situation where you are sitting on a laptop working on some imp
 * [Nginx](https://github.com/nginx/nginx)
 
 
-> Made with 💕 by ![TeamLightConnector-Devs](https://img.shields.io/static/v1?label=TeamLightConnector&message=devs&color=critical)
+> Made with 💕 by ![TeamLightConnector-Devs](https://img.shields.io/static/v1?label=TeamLightConnector&message=devs&color=critical) 
+
+> Individual Contributions
+
+- Dhairya Taneja- Team Leader,Project Architect,Backend Development, Product Deployment
+- Ishan Singla- Frontend Development & Integration
+- Aaditya Sharma- UI/UX Design & Frontend Development
