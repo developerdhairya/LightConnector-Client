@@ -1,4 +1,6 @@
-var homePage = `  
+/* The file all static pages that will be rendered conditionally depending on the events triggered*/
+
+const homePage = `  
 <div class="lightBg p-5">
         <!-- section for sending message -->
         <div class="text-paste-wrapper mid-it">
@@ -58,7 +60,7 @@ var homePage = `
         </div>
       </div>`;
 
-var indexPagePc = qrValue => `
+const indexPagePC = qrValue => `
 <section class="newmain">
   <div class="container newmainDiv h-100">
     <div class="row vh-100">
@@ -78,21 +80,22 @@ var indexPagePc = qrValue => `
 `;
 
 var homeMessage = ({ message, file }) => {
-  let x=bufferToUrl(file, message);
+  let url=bufferToUrl(file, message);
   return `<div class="each-stuff-wrapper">
 <div class="text-item">
   <div class="data" style="color: rgb(0, 0, 0)">${message}</div>
   <!-- image div -->
-  ${x ? `
-  <a href="${x}" download="${message}">
+  ${url? `
+  <a href="${url}" download="${message}">
   <button>
     <img height="20px" src="https://cdn-icons-png.flaticon.com/512/1092/1092004.png"/>
   </button>
-  </a>
-  ` : `
-  <button onclick="getCopy('${message}')">
+  </a>`
+   : 
+  `<button onclick="getCopy('${message}')">
     <img height="20px" src="https://cdn-icons-png.flaticon.com/512/4355/4355195.png"/>
   </button>
   `}
   
-</div><br>`}
+</div><br>`
+}

@@ -1,7 +1,5 @@
-const device=["mobile","desktop"];
-
-function checkDevice() {
-    var check = false;
+const checkDevice=()=>{
+    let check = false;
     (function (a) {
       if (
         /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(
@@ -13,13 +11,17 @@ function checkDevice() {
       )
         check = true;
     })(navigator.userAgent || navigator.vendor || window.opera);
-    if(check){
-      return 0;
-    }else{
-      return 1;
-    }
-  }
+    return check?"MOBILE":"LAPTOP";
+}
 
+const toggleTheme=(imageElement)=>{
+    document.body.classList.toggle("dark-theme");
+    if (document.body.classList.contains("dark-theme")) {
+      imageElement.src = "assets/images/sun.png";
+    } else {
+      imageElement.src = "assets/images/moon.png";
+    }
+}
 
 function dataTransferModel(room=null,message=null,file=null,device=null){
     return {
@@ -29,18 +31,23 @@ function dataTransferModel(room=null,message=null,file=null,device=null){
         "device":device
     };
 }
- function getCopy (data){
-  navigator.clipboard.writeText(data);
- }
 
- function bufferToUrl(buffer,name){
+function getCopy (data){
+  navigator.clipboard.writeText(data);
+}
+
+
+function bufferToUrl(buffer,name){
   let blob= new Blob([buffer]);
   blob.lastModifiedDate = new Date();
-  console.log(name);
   blob.name = name;
   let url=window.URL.createObjectURL(blob);
-  console.log(url)
-    return url;
+  return url;
+}
 
-
- }
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    renderData(input.files[0].name, URL.createObjectURL(input.files[0]));
+    input.value = "";
+  }
+}
