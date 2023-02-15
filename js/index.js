@@ -3,7 +3,7 @@
 let socket; 
 
 try{
-  socket= io("http://43.204.55.47:3000");
+  socket= io("https://43.204.55.47:3000");
 }catch(e){
     alert("not able to connect to sockets")
 }
