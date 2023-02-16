@@ -41,7 +41,7 @@ Let us imagine a situation where you are sitting on a laptop working on some imp
 
 > Individual Contributions
 - **Dhairya Taneja**- Team Leader,Project Architect,Backend Development,Frontend Development & Product Deployment
-- **Ishan Singla**- Frontend Development & Integration
+- **Ishan Singla**- UI/UX Design & Frontend Development
 - **Aaditya Sharma**- UI/UX Design & Frontend Development
 
 ### PS-The project won Coffee&Code Hackathon at UIET Punjab.
